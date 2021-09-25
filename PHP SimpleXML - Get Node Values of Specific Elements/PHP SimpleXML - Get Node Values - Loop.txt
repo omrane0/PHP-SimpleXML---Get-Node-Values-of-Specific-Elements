@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$xml=simplexml_load_file("books.xml") or die("Error: Cannot create object");
+foreach($xml->children() as $books) {
+        echo $books->title . ", ";
+        echo $books->author . ", ";
+        echo $books->year . ", ";
+        echo $books->price . "<br>";
+}
+?>
+
+</body>
+</html>
+
+
+
+
+Everyday Italian, Giada De Laurentiis, 2005, 30.00
+Harry Potter, J K. Rowling, 2005, 29.99
+XQuery Kick Start, James McGovern, 2003, 49.99
+Learning XML, Erik T. Ray, 2003, 39.95
